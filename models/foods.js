@@ -9,5 +9,5 @@ const foodSchema = new mongoose.Schema({
     fat: Number,
 });
 
-const Food = mongoose.model("cal", foodSchema);
+const Food = mongoose.model("items", foodSchema);
 module.exports = Food;

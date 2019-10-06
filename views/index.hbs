@@ -1,0 +1,9 @@
+<h1>Food Eaten Today</h1>
+
+<ul style="list-style-type: none">
+    {{#each foods as |item|}}
+        <li><a href="/{{item.id}}">{{item.name}}</a></li>
+    {{/each}}
+</ul>
+
+<a href="/new">Add Food</a>

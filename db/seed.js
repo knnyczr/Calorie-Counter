@@ -7,5 +7,5 @@ Food.deleteMany({})
   })
   .then(() => {
       console.log("Data collected")
-    process.exit()
+    process.exit();
 });

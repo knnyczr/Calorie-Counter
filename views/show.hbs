@@ -1,0 +1,12 @@
+<h1>{{name}}</h1>
+
+<h2>servings: {{ servings }}</h2>
+<h2>calories: {{calories}}</h2>
+<h2>proteins: {{protein}}</h2>
+<h2>carbs: {{carb}}</h2>
+<h2>fats: {{fat}}</h2>
+
+<a href="/edit/{{id}}">edit</a>
+<form action="/{{id}}?_method=delete" method="post">
+    <input type="submit" value="Delete">
+</form>
