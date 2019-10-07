@@ -6,7 +6,7 @@
 <h2>carbs: {{carb}}</h2>
 <h2>fats: {{fat}}</h2>
 
-<a href="/edit/{{id}}">edit</a>
-<form action="/{{id}}?_method=delete" method="post">
-    <input type="submit" value="Delete">
+<a class="link" href="/edit/{{id}}">edit</a>
+<form class="deleteContain" action="/{{id}}?_method=delete" method="post">
+    <input class="deleteBtn" type="submit" value="Delete">
 </form>

@@ -1,0 +1,65 @@
+body {
+    background: #4cc2c4;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3em;
+    color: #343434;
+}
+.itemContainer {
+    line-height: 150%;
+}
+/* h2 {
+    text-align: center;
+} */
+
+.items {
+    background-color: red;
+    box-shadow: 0 5px 0 darkred;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.items:hover {
+    background-color: #ce0606;
+    cursor: pointer
+}
+.items:active {
+    box-shadow: none;
+    top: 5px;
+}
+.link {
+    background-color: #f54785;
+    box-shadow: 0 5px 0 darkorchid;
+    color: #343434;
+    text-decoration: none;
+    position: relative;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+.link:hover {
+    background-color: #c71a1a;
+    cursor: pointer;
+}
+.link:hover {
+    box-shadow: none;
+    top: 5px;
+}
+.deleteContain {
+    margin-bottom: 20px;
+}
+
+.deleteBtn {
+    background-color: #f54785;
+    color: black;
+    padding: 1em 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.deleteBtn:hover,
+.deleteBtn:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+  color: black;
+  transition: 0.25s;
+}

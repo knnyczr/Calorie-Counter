@@ -1,9 +1,11 @@
 <h1>Food Eaten Today</h1>
 
-<ul style="list-style-type: none">
+<ul class="itemContainer" style="list-style-type: none">
     {{#each foods as |item|}}
-        <li><a href="/{{item.id}}">{{item.name}}</a></li>
+        <li><a class="items" href="/{{item.id}}">{{item.name}}</a></li>
     {{/each}}
 </ul>
 
-<a href="/new">Add Food</a>
+<a class="link" href="/new">Add Food</a>
+
+<h3>Total calories consumed: </h3>
