@@ -1,6 +1,6 @@
 body {
-    background: #4cc2c4;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: #79f3f5;
+    font-family: 'Josefin Sans', sans-serif;;
     font-size: 3em;
     color: #343434;
 }
@@ -12,9 +12,9 @@ body {
 } */
 
 .items {
-    background-color: red;
+    background-color: #fddada;
     box-shadow: 0 5px 0 darkred;
-    color: white;
+    color: rgb(66, 66, 66);
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
@@ -28,8 +28,8 @@ body {
     top: 5px;
 }
 .link {
-    background-color: #f54785;
-    box-shadow: 0 5px 0 darkorchid;
+    background-color: #fddada;
+    box-shadow: 0 5px 0 darkred;
     color: #343434;
     text-decoration: none;
     position: relative;
@@ -37,7 +37,7 @@ body {
     border-radius: 10px;
 }
 .link:hover {
-    background-color: #c71a1a;
+    background-color: red;
     cursor: pointer;
 }
 .link:hover {
@@ -49,12 +49,12 @@ body {
 }
 
 .deleteBtn {
-    background-color: #f54785;
+    background-color: rgb(248, 85, 85);
     color: black;
     padding: 1em 1em;
     border-radius: 1em;
     cursor: pointer;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Josefin Sans', sans-serif;;
 }
 
 .deleteBtn:hover,
