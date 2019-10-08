@@ -1,12 +1,16 @@
-<h1>{{name}}</h1>
+<h1 id="showTitle">{{name}}</h1>
 
-<h2>servings: {{ servings }}</h2>
-<h2>calories: {{calories}}</h2>
-<h2>proteins: {{protein}}</h2>
-<h2>carbs: {{carb}}</h2>
-<h2>fats: {{fat}}</h2>
+<div class="showContain">
+    <h2 class="showInfo">servings: {{ servings }}</h2>
+    <h2 class="showInfo">calories: {{calories}}</h2>
+    <h2 class="showInfo">proteins: {{protein}}</h2>
+    <h2 class="showInfo">carbs: {{carb}}</h2>
+    <h2 class="showInfo">fats: {{fat}}</h2>
+</div>
 
-<a class="link" href="/edit/{{id}}">edit</a>
-<form class="deleteContain" action="/{{id}}?_method=delete" method="post">
-    <input class="deleteBtn" type="submit" value="Delete">
-</form>
+<div class="showButtons">
+    <a class="link" href="/edit/{{id}}">edit</a>
+    <form class="deleteContain" action="/{{id}}?_method=delete" method="post">
+        <input class="deleteBtn" type="submit" value="Delete">
+    </form>
+</div>

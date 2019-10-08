@@ -1,4 +1,4 @@
-<h1>Food Eaten Today</h1>
+<h1>Food Eaten Today - {{today}}</h1>
 
 <ul class="itemContainer" style="list-style-type: none">
     {{#each foods as |item|}}
@@ -8,4 +8,4 @@
 
 <a class="link" href="/new">Add Food</a>
 
-<h3 class="totalCal">Total calories consumed: {{totalCal}}</h3>
+<h3 class="totalCal">Total calories consumed: {{calSum}}</h3>

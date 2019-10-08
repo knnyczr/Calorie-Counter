@@ -1,5 +1,5 @@
 body {
-    background: #79f3f5;
+    background: #cafbfc;
     font-family: 'Josefin Sans', sans-serif;;
     font-size: 3em;
     color: #343434;
@@ -62,4 +62,52 @@ body {
   box-shadow: inset 0 0 0 2em var(--hover);
   color: black;
   transition: 0.25s;
+}
+.masterContainNew {
+    display: flex;
+    flex-flow: row;
+}
+.newContainTop {
+    display: flex;
+    flex-flow: column;
+    margin-right: 40px;
+}
+.newContainBottom {
+    display: flex;
+    flex-flow: column;
+    
+}
+.newContainTop input {
+    height: 30px;
+    width: 60px;
+    margin-bottom: 9px;
+    font-size: 20px;
+}
+#newFoodNameInput {
+    height: 30px;
+    width: 300px;
+    margin-bottom: 9px;
+    font-size: 20px;
+}
+.newContainBottom input {
+    height: 30px;
+    width: 60px;
+    margin-bottom: 9px;
+    font-size: 20px;
+}
+#showTitle {
+    margin-top: -20px;
+}
+.showContain {
+    margin-top: -40px;
+    margin-bottom: 20px;
+    padding-bottom: -40px;
+}
+.showInfo {
+    margin-bottom: -30px;
+}
+.showButtons {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
 }

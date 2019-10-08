@@ -1,9 +1,31 @@
 const express = require("express");
 const router = express.Router();
 
-const jsonData = require("../db/seeds.json")
 const Foods = require("../models/foods");
+// let functotalCals = require("./totalcals")
+//-------------------------------------------------------------------
+//Other Info
 
+//Curretn Date:
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+
+// function totalCal(foods) {
+//   console.log("function running----", foods)
+//   calSum = 0;
+
+//   for (let index = 0; index < foods.length - 1; index++) {
+//     console.log(`${foods[index].name}: `, foods[index].calories);
+//     calSum += Number(foods[index].calories);
+//     console.log("total cal is: ", calSum);
+//   }
+//   return calSum; 
+// };
+//-------------------------------------------------------------------
 router.delete('/:id', (req, res) => {
     Foods.findOneAndRemove({ _id: req.params.id })
       .then(() => {
@@ -14,34 +36,32 @@ router.delete('/:id', (req, res) => {
 router.post('/', (req, res) => {
     Foods.create(req.body)
       .then(item => {
-        jsonData.push(item);
-      })
-      .then(item => {
         res.redirect('/')
       })
 });
-
+ 
 router.put('/:id', (req, res) => {
     Foods.findOneAndUpdate({_id: req.params.id}, req.body, { new: true })
       .then(item => {
         res.redirect('/')
       })
-});
+}); 
 
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
     Foods.find({}).then(foods =>  {
-      console.log("RUNNING COUNT", foods)
-      totalCal = totalCal(foods);
-      res.render('index', { foods, totalCal})
-    })
-    // .then(foods => {
-    //   console.log("RUNNING COUNT")
-    //   totalCal = totalCal(foods);
-    // })
+      console.log("RUNNING COUNT")
+      calSum = 0;
+      foods.forEach(food => {
+          console.log(`${food.name}: `, food.calories);
+          calSum += Number(food.calories);
+          console.log("total cal is: ", calSum);
+    }); 
+      res.render('index', { today, foods, calSum })
+    }) 
     .catch(err => console.error(err));
-});
+}); 
 
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:id', (req, res, next) => {
     Foods.findOne({_id: req.params.id})
       .then(item => {
         res.render("edit", { item })
@@ -61,17 +81,6 @@ router.get("/:id", (req, res) => {
 });
 
 //FUNCTIONS--------------------------------------
-function totalCal(foods) {
-  console.log("function ran----")
-  calSum = 0;
-  // const calHTML = document.querySelector(".totalCal");
-  // console.log(calHTML);
-  for (let index = 0; index < foods.length; index++) {
-    console.log(`${foods[index].name}: `, foods[index].calories);
-    calSum += Number(foods[index].calories);
-    console.log("total cal is: ", calSum);
-  }
-  return calSum; 
-};
+
 
 module.exports = router;

@@ -1,19 +1,23 @@
 <h2>New Food:</h2>
 
 <form action="/" method="POST">
-    <label for="name">Name of food:</label>
-    <input type="text" name="name">
-    <label for="servings">Serving size:</label>
-    <input type="number" name="servings">
-    <label for="calories">Calories:</label>
-    <input type="number" name="calories">
-    <br>
-    <label for="protein">Protein:</label>
-    <input type="number" name="protein">
-    <label for="carb">Carbs:</label>
-    <input type="number" name="carb">
-    <label for="fat">Fat:</label>
-    <input type="number" name="fat">
-    <br>
-    <input type="submit" value="Create">
+<div class="masterContainNew">
+    <div class="newContainTop">
+        <label for="name">Name of food:</label>
+        <input id="newFoodNameInput" type="text" name="name" required>
+        <label for="servings">Serving size:</label>
+        <input type="number" name="servings" min="0">
+        <label for="calories">Calories:</label>
+        <input type="number" name="calories" min="0" required> 
+    </div>
+    <div class="newContainBottom">
+        <label for="protein">Protein:</label>
+        <input type="number" name="protein" min="0" required>
+        <label for="carb">Carbs:</label>
+        <input type="number" name="carb" min="0" required>
+        <label for="fat">Fat:</label>
+        <input type="number" name="fat" min="0" required>
+    </div>
+</div>
+    <input class="items" type="submit" value="Create">
 </form>
