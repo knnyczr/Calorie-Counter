@@ -1,5 +1,5 @@
-<h1>Food Eaten Today - {{today}}</h1>
-
+<h1 id="mainPageHeader">Food Eaten Today - {{today}}</h1>
+<hr>
 <ul class="itemContainer" style="list-style-type: none">
     {{#each foods as |item|}}
         <li><a class="items" href="/{{item.id}}">{{item.name}}</a></li>
@@ -7,5 +7,10 @@
 </ul>
 
 <a class="link" href="/new">Add Food</a>
-
+<hr>
 <h3 class="totalCal">Total calories consumed: {{calSum}}</h3>
+<div class="macrosContain">
+    <h6 class="macrosText">Total protein: {{protSum}}</h6>
+    <h6 class="macrosText">Total carbs: {{carbSum}}</h6>
+    <h6 class="macrosText">Total fats: {{fatSum}}</h6>
+</div>

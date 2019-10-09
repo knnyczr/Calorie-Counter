@@ -55,8 +55,26 @@ router.get('/', (req, res) => {
           console.log(`${food.name}: `, food.calories);
           calSum += Number(food.calories);
           console.log("total cal is: ", calSum);
-    }); 
-      res.render('index', { today, foods, calSum })
+    });
+      protSum = 0;
+      foods.forEach(food => {
+          console.log(`${food.name}: `, food.protein);
+          protSum += Number(food.protein);
+          console.log("total protein is: ", protSum)
+      });
+      carbSum = 0;
+      foods.forEach(food => {
+          console.log(`${food.name}: `, food.carb);
+          carbSum += Number(food.carb);
+          console.log("total protein is: ", carbSum)
+      });
+      fatSum = 0;
+      foods.forEach(food => {
+          console.log(`${food.name}: `, food.fat);
+          fatSum += Number(food.fat);
+          console.log("total protein is: ", fatSum)
+      }); 
+      res.render('index', { today, foods, calSum, protSum, carbSum, fatSum})
     }) 
     .catch(err => console.error(err));
 }); 
