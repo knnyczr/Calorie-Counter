@@ -1,22 +1,23 @@
-<h2>Edit - {{item.name}}:</h2>
+<h2 id="editPageHeader">Edit - {{item.name}}:</h2>
 
 <form action="/{{item.id}}?_method=put" method="post">
-  <p>
-    <label>Name:</label>
-    <input type="text" value="{{item.name}}" name="name"/>
-    <label>Servings:</label>
-    <input type="number" value="{{item.servings}}" name="servings"/>
-    <label>Calories:</label>
-    <input type="number" value="{{item.calories}}" name="calories"/>
+  <div class="masterContainNew">
+    <p class="newContainTop">
+      <label>Name of food:</label>
+      <input id="newFoodNameInput" type="text" value="{{item.name}}" name="name"/>
+      <label>Servings:</label>
+      <input type="number" value="{{item.servings}}" name="servings" min="0"/>
+      <label>Calories:</label>
+      <input type="number" value="{{item.calories}}" name="calories" min="0"/>
   </p>
-  <p>
-    <label>Protein:</label>
-    <input type="number" value="{{item.protein}}" name="protein"/>
-    <label>Carbs:</label>
-    <input type="number" value="{{item.carb}}" name="carb"/>
-    <label>Fat:</label>
-    <input type="number" value="{{item.fat}}" name="fat"/>
+  <p class="newContainBottom">
+      <label>Protein:</label>
+      <input type="number" value="{{item.protein}}" name="protein" min="0"/>
+      <label>Carbs:</label>
+      <input type="number" value="{{item.carb}}" name="carb" min="0"/>
+      <label>Fat:</label>
+      <input type="number" value="{{item.fat}}" name="fat" min="0"/>
   </p>
-  <br>
-  <input type="submit" value="Update" />
+  </div>
+  <input class="items" id="updateButton" type="submit" value="Update" />
 </form>

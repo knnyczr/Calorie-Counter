@@ -12,6 +12,7 @@ app.use(express.static('./public'));
 
 const foodController = require('./controllers/calories');
 app.use("/", foodController);
+app.use("/assets", express.static('public'));
 
 app.set("port", process.env.PORT || 8000);
 

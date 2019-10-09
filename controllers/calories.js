@@ -14,17 +14,6 @@ var yyyy = today.getFullYear();
 
 today = mm + '/' + dd + '/' + yyyy;
 
-// function totalCal(foods) {
-//   console.log("function running----", foods)
-//   calSum = 0;
-
-//   for (let index = 0; index < foods.length - 1; index++) {
-//     console.log(`${foods[index].name}: `, foods[index].calories);
-//     calSum += Number(foods[index].calories);
-//     console.log("total cal is: ", calSum);
-//   }
-//   return calSum; 
-// };
 //-------------------------------------------------------------------
 router.delete('/:id', (req, res) => {
     Foods.findOneAndRemove({ _id: req.params.id })
@@ -98,7 +87,5 @@ router.get("/:id", (req, res) => {
       .catch(err => console.error(err));
 });
 
-//FUNCTIONS--------------------------------------
-
-
+//--------------------------------------
 module.exports = router;
