@@ -61,7 +61,7 @@ router.get('/', (req, res) => {
     .catch(err => console.error(err));
 }); 
 
-router.get('/edit/:id', (req, res, next) => {
+router.get('/edit/:id', (req, res) => {
     Foods.findOne({_id: req.params.id})
       .then(item => {
         res.render("edit", { item })
