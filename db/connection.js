@@ -9,12 +9,11 @@ if (process.env.NODE_ENV === "production") {
     mongoURI = "mongodb://localhost/foods";
 };
 
-mongoose
-  .connect(mongoURI, { useNewUrlParser: true })
-  .then(instance =>
-    console.log(`Connected to db: ${instance}`)
-  )
-  .catch(error => console.log("Connection failed!", error));
+mongoose.connect(mongoURI, {useNewUrlParser: true}, () => {
+    console.log("CONNECTED");
+    })
+    .catch(error => console.log("Connection failed!", error)
+);
 
 mongoose.Promise = Promise;
 module.exports = mongoose;
