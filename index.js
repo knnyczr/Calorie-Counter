@@ -13,4 +13,8 @@ app.use(express.static('./public'));
 const foodController = require('./controllers/calories');
 app.use("/", foodController);
 
-app.listen(8000, () => console.log("Running on port 8000!"))
+app.set("port", process.env.PORT || 8000);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
